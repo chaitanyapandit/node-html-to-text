@@ -172,9 +172,7 @@ function formatAnchor (elem, walk, builder, formatOptions) {
     const hideSameLink = formatOptions.hideLinkHrefIfSameAsText && href === text;
     if (!hideSameLink) {
       builder.addInline(
-        (!text)
-          ? href
-          : ' ' + withBrackets(href, formatOptions.linkBrackets),
+        ' ' + withBrackets(href, formatOptions.linkBrackets),
         { noWordTransform: true }
       );
     }
